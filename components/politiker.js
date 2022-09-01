@@ -5,6 +5,7 @@ import annalena1 from '../public/annalena1.png'
 import habeck1 from '../public/habeck1.png'
 import habeck2 from '../public/habeck2.png'
 import schnabel1 from '../public/schnabel1.png'
+import boeri1 from '../public/boeri1.png'
 import tom1 from '../public/tom1.png'
 import { useState } from 'react'
 import Backgrounds from './backgrounds'
@@ -17,7 +18,7 @@ export default function Politiker({currentPicture, setCurrentPicture, background
     const [topText, setTopText] = useState('')
     const [offsetTop, setOffsetTop] = useState(100)
     const [offsetLeft, setOffsetLeft] = useState(50)
-    const politiker = [ fritz1, lindner1, annalena1, habeck2, habeck1, tom1, schnabel1]
+    const politiker = [ fritz1, lindner1, annalena1, habeck2, habeck1, tom1, boeri1]
     const [gray, setGray] = useState(false)
     const [rotate, setRotate] = useState('rotate-0')
 
