@@ -21,6 +21,12 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: rgb(5, 7, 3)
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
