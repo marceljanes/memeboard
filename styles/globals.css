@@ -1,6 +1,8 @@
 html,
 body {
   padding: 0;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
