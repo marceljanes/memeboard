@@ -6,6 +6,7 @@ import habeck1 from '../public/habeck1.png'
 import habeck2 from '../public/habeck2.png'
 import { useState } from 'react'
 import Backgrounds from './backgrounds'
+import { useEffect } from 'react'
 
 
 
@@ -15,6 +16,9 @@ export default function Politiker({currentPicture, setCurrentPicture, background
     const politiker = [ fritz1, lindner1, annalena1, habeck2, habeck1,]
     const [gray, setGray] = useState(false)
 
+    useEffect(() => {
+        setCurrentPicture(fritz1)
+    }, [])
 
     return (
         <>
