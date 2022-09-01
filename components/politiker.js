@@ -36,7 +36,7 @@ export default function Politiker({currentPicture, setCurrentPicture, background
             
             </div>
         
-        <div className="w-1/2 flex flex-col justify-center items-center h-10 mb-5">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center h-10 mb-5">
             <div>
                 <span className="text-white mr-5 font-italic">Ich will sagen, dass...</span><input className="border border-1 border-white rounded-md " onChange={(e) => setTopText(e.target.value)}></input>
             </div>
