@@ -8,6 +8,8 @@ import bggray1 from '../public/bggray1.png'
 import bgyellow1 from '../public/bgyellow1.png'
 import bgred1 from '../public/bgred1.png'
 import pride1 from '../public/pride1.png'
+import frosch1 from '../public/frosch1.png'
+import kernkraft1 from '../public/kernkraft1.png'
 import { useEffect } from 'react'
 
 
@@ -21,7 +23,7 @@ export default function Backgrounds({background, setCurrentBackground}) {
 
 
     
-    const backgrounds = [bgcool2, bgcdu1, bundestag, bgcool1, bggreen1, bgyellow1, bggray1, bgred1, pride1]
+    const backgrounds = [bgcool2, bgcdu1, bundestag, bgcool1, bggreen1, kernkraft1, bgyellow1, bggray1, bgred1, pride1, frosch1]
 
 
     useEffect(() => {
