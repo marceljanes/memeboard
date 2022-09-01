@@ -3,6 +3,11 @@ import bgcdu1 from '../public/bgcdu1.png'
 import bundestag from '../public/bundestag.png'
 import bgcool1 from '../public/bgcool1.png'
 import bggreen1 from '../public/bggreen1.png'
+import bggray1 from '../public/bggray1.png'
+import bgyellow1 from '../public/bgyellow1.png'
+import bgred1 from '../public/bgred1.png'
+
+
 
 import { useState } from 'react'
 
@@ -11,7 +16,7 @@ import { useState } from 'react'
 export default function Backgrounds({background, setCurrentBackground}) {
 
    
-    const backgrounds = [bgcdu1, bundestag, bgcool1, bggreen1]
+    const backgrounds = [bgcdu1, bundestag, bgcool1, bggreen1, bgyellow1, bggray1, bgred1]
 
 
     return (

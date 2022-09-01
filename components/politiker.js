@@ -1,7 +1,9 @@
 import Image from 'next/image'
-import robert from '../public/roberthabeck1.png'
 import fritz1 from '../public/friedrichmerz1.png'
 import lindner1 from '../public/lindner1.png'
+import annalena1 from '../public/annalena1.png'
+import habeck1 from '../public/habeck1.png'
+import habeck2 from '../public/habeck2.png'
 import { useState } from 'react'
 import Backgrounds from './backgrounds'
 
@@ -10,7 +12,7 @@ import Backgrounds from './backgrounds'
 export default function Politiker({currentPicture, setCurrentPicture, background, setCurrentBackground}) {
 
     const [topText, setTopText] = useState('')
-    const politiker = [robert, fritz1, lindner1]
+    const politiker = [ fritz1, lindner1, annalena1, habeck2, habeck1,]
     const [gray, setGray] = useState(false)
 
 
@@ -30,14 +32,14 @@ export default function Politiker({currentPicture, setCurrentPicture, background
             
             </div>
         
-        <div className="w-1/2 flex flex-col justify-center items-center h-10">
+        <div className="w-1/2 flex flex-col justify-center items-center h-10 mb-5">
             <div>
-                <input onChange={(e) => setTopText(e.target.value)}></input>
+                <span className="text-white mr-5 font-italic">Ich will sagen, dass...</span><input className="border border-1 border-white rounded-md " onChange={(e) => setTopText(e.target.value)}></input>
             </div>
         </div>
 
         <div className="w-full md:w-1/3 h-96 relative">
-            <p className="ml-5 tracking-tighter w-[300px] absolute top-1/3 z-10 font-extrabold text-3xl italic font-sans uppercase text-white"><span className="bg-slate-800">{topText}</span></p>
+            <p className="ml-5 tracking-tighter w-[300px] absolute top-1/3 z-10 font-bold text-3xl italic font-sans uppercase text-white text-left rounded leading-relaxed "><span className="rounded pt-1 pb-1 bg-slate-800">{topText}</span></p>
             {background !== '' && <div className="bg-green-500 z-20 cursor-pointer absolute w-full h-full opacity-0 hover:opacity-20"></div>}
             <Image src={background} layout="fill" objectFit='contain' className="z-0 absolute bottom-0 " />
             <Image src={currentPicture} layout="fill" objectFit='contain' className="z-20 absolute bottom-0" />
