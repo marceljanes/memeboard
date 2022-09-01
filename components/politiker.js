@@ -4,6 +4,7 @@ import lindner1 from '../public/lindner1.png'
 import annalena1 from '../public/annalena1.png'
 import habeck1 from '../public/habeck1.png'
 import habeck2 from '../public/habeck2.png'
+import schnabel1 from '../public/schnabel1.png'
 import tom1 from '../public/tom1.png'
 import { useState } from 'react'
 import Backgrounds from './backgrounds'
@@ -12,11 +13,11 @@ import { useEffect } from 'react'
 
 
 export default function Politiker({currentPicture, setCurrentPicture, background, setCurrentBackground}) {
-
+    const [bonus, setBonus] = useState('')
     const [topText, setTopText] = useState('')
     const [offsetTop, setOffsetTop] = useState(100)
     const [offsetLeft, setOffsetLeft] = useState(50)
-    const politiker = [ fritz1, lindner1, annalena1, habeck2, habeck1, tom1]
+    const politiker = [ fritz1, lindner1, annalena1, habeck2, habeck1, tom1, schnabel1]
     const [gray, setGray] = useState(false)
     const [rotate, setRotate] = useState('rotate-0')
 
@@ -62,7 +63,7 @@ export default function Politiker({currentPicture, setCurrentPicture, background
                 {politiker.map((poli, i) => (
                     <div onClick={() => setCurrentPicture(poli)} key={i} className="flex-none w-2/3 md:w-1/5 h-full mr-8 md:pb-4 relative rounded-xl border border-1">
                         <div className="bg-gray-200 z-20 cursor-pointer absolute w-full h-full opacity-0 hover:opacity-20"></div>
-                        <Image src={poli}  layout='fill' className="object-cover rounded-xl border border-1"/>
+                        <Image src={poli}  layout='fill' className={`object-cover rounded-xl border border-1 ${poli == schnabel1 && bonus !== 'Friebe' && 'invisible'}`}/>
                     </div>
 
                 ))}
@@ -94,6 +95,7 @@ export default function Politiker({currentPicture, setCurrentPicture, background
             <button className="bg-green-400 rounded p-1 cursor-pointer text-green-900 font-bold " onClick={(e) => moveText(e)('rechts') }> Text rechts </button>
             <button className="bg-gray-200 rounded p-1 cursor-pointer text-gray-900 font-bold " onClick={(e) => rotateText(e)}> Text schief </button>
         </div>
+        <input className="mt-5" onChange={(e) => setBonus(e.target.value)}></input>
         
         <Backgrounds background={background} setCurrentBackground={setCurrentBackground} />
         
