@@ -96,7 +96,10 @@ export default function Politiker({currentPicture, setCurrentPicture, background
             <button className="bg-green-400 rounded p-1 cursor-pointer text-green-900 font-bold " onClick={(e) => moveText(e)('rechts') }> Text rechts </button>
             <button className="bg-gray-200 rounded p-1 cursor-pointer text-gray-900 font-bold " onClick={(e) => rotateText(e)}> Text schief </button>
         </div>
-        <input className="mt-5" onChange={(e) => setBonus(e.target.value)}></input>
+        <div>
+                <span className="text-white mr-5 font-italic">Geheimcodes für Extra-Levels...</span><input className="mt-5" onChange={(e) => setBonus(e.target.value)}></input>
+            </div>
+        
         
         <Backgrounds background={background} setCurrentBackground={setCurrentBackground} />
         
