@@ -14,15 +14,15 @@ import { useEffect } from 'react'
 
 
 
-export default function Politiker({currentPicture, setCurrentPicture, background, setCurrentBackground}) {
+export default function Politiker({backgrounds, setBackgrounds, currentPicture, setCurrentPicture, background, setCurrentBackground}) {
     const [bonus, setBonus] = useState('')
-    const [textBackground, setTextBackground] = useState('bg-slate-800')
+    const [textBackground, setTextBackground] = useState('bg-slate-800')    
     const [textFarbe, setTextFarbe] = useState('text-white')
     const [topText, setTopText] = useState('')
     const [offsetTop, setOffsetTop] = useState(100)
     const [offsetLeft, setOffsetLeft] = useState(50)
     const [backlight, setBackLight] = useState(false)
-    const politiker = [ lindner2, fritz1, lindner1, annalena1, habeck2, habeck1, tom1, boeri1]
+    const [politiker, setPolitiker] = useState([lindner2, fritz1, lindner1, annalena1, habeck2, habeck1, tom1, boeri1])
     const [gray, setGray] = useState(false)
     const [rotate, setRotate] = useState('rotate-0')
 
@@ -47,7 +47,7 @@ export default function Politiker({currentPicture, setCurrentPicture, background
         setTextFarbe(command)
     }
 
-
+   
 
 
 
@@ -150,12 +150,10 @@ export default function Politiker({currentPicture, setCurrentPicture, background
 
             
         </div>
-        <div>
-                <span className="text-white mr-5 font-italic">Geheimcodes für Extra-Levels...</span><input className="mt-5" onChange={(e) => setBonus(e.target.value)}></input>
-            </div>
+       
         
         
-        <Backgrounds background={background} setCurrentBackground={setCurrentBackground} />
+        <Backgrounds politiker={politiker} setPolitiker={setPolitiker} background={background} setCurrentBackground={setCurrentBackground} backgrounds={backgrounds} setBackgrounds={setBackgrounds} />
         
             
 

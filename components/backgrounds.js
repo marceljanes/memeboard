@@ -7,6 +7,8 @@ import bggreen1 from '../public/bggreen1.png'
 import bggray1 from '../public/bggray1.png'
 import bgyellow1 from '../public/bgyellow1.png'
 import bgred1 from '../public/bgred1.png'
+import friebe1 from '../public/friebe1.png'
+import dirk1 from '../public/dirk1.png'
 import pride1 from '../public/pride1.png'
 import frosch1 from '../public/frosch1.png'
 import kernkraft1 from '../public/kernkraft1.png'
@@ -18,16 +20,29 @@ import { useState } from 'react'
 
 
 
-export default function Backgrounds({background, setCurrentBackground}) {
+export default function Backgrounds({background, setCurrentBackground, backgrounds, setBackgrounds, politiker, setPolitiker}) {
 
-
+    const [bonus, setBonus] = useState('')
+    // const [backgrounds, setBackgrounds] = useState([bgcool2, bgcdu1, bundestag, bgcool1, bggreen1, kernkraft1, bgyellow1, bggray1, bgred1, pride1, frosch1])
 
     
-    const backgrounds = [bgcool2, bgcdu1, bundestag, bgcool1, bggreen1, kernkraft1, bgyellow1, bggray1, bgred1, pride1, frosch1]
+    const changeGeheimCode = (e) => {
+        console.log(bonus)
+        if(bonus === 'Friebe') {           
+            
+            setPolitiker(politiker => [...politiker, friebe1])
+        }
+        if(bonus === 'Nase') {
+            
+            setPolitiker(politiker => [...politiker, dirk1])
+        }
+
+    }
 
 
     useEffect(() => {
         setCurrentBackground(bggreen1)
+        setBackgrounds([bgcool2, bgcdu1, bundestag, bgcool1, bggreen1, kernkraft1, bgyellow1, bggray1, bgred1, pride1, frosch1])
     }, [])
 
     return (
@@ -44,6 +59,12 @@ export default function Backgrounds({background, setCurrentBackground}) {
                 
             
             </div>
+            <div className="mb-5 mr-1 text-sm">
+                <span className="text-white mr-5 font-italic">Geheimcodes für Extra-Levels...</span><input className="mt-5" onChange={(e) => setBonus(e.target.value)}></input><button className="ml-3 pr-1 pl-1 bg-green-500 text-white rounded-lg cursor-pointer" onClick={(e) => changeGeheimCode(e)}> 🥳 Open Magic</button>
+             </div>
+             <div>
+                <button onClick={() => console.log(backgrounds)}>Clickl</button>
+             </div>
        
             
 

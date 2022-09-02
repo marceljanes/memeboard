@@ -7,9 +7,11 @@ import Backgrounds from '../components/backgrounds'
 import Script from 'next/script';
 
 
+
 export default function Home() {
   const [currentPicture, setCurrentPicture] = useState('')
   const [background, setCurrentBackground] = useState('')
+  const [backgrounds, setBackgrounds] = useState([])
  
 
 
@@ -39,7 +41,7 @@ export default function Home() {
 
       <div className="flex flex-col justify-center items-center w-full">
             
-                <Politiker currentPicture={currentPicture} setCurrentPicture={setCurrentPicture} background={background} setCurrentBackground={setCurrentBackground} />
+                <Politiker setBackgrounds={setBackgrounds} backgrounds={backgrounds} currentPicture={currentPicture} setCurrentPicture={setCurrentPicture} background={background} setCurrentBackground={setCurrentBackground} />
             
             
                 
