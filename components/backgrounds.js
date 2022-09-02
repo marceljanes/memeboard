@@ -32,10 +32,10 @@ export default function Backgrounds({background, setCurrentBackground}) {
 
     return (
         <>
-        <div className="bg-gray-900 w-1/2 flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8 h-20 mt-10">
+        <div className="bg-gray-900 w-full md:w-1/2 flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8 h-20 mt-10">
 
                 {backgrounds.map((bg, i) => (
-                    <div onClick={() => setCurrentBackground(bg)} key={i} className="flex-none w-2/3 md:w-20 h-full mr-4 md:pb-4 relative rounded-xl border border-1">
+                    <div onClick={() => setCurrentBackground(bg)} key={i} className="flex-none w-1/3 md:w-20 h-full mr-4 md:pb-4 relative rounded-xl border border-1">
                         <div className="bg-gray-200 z-20 cursor-pointer absolute w-full h-full opacity-0 hover:opacity-20"></div>
                         <Image src={bg} layout='fill' className="object-cover rounded-xl border border-1"/>
                     </div>
