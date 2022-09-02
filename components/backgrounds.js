@@ -62,9 +62,7 @@ export default function Backgrounds({background, setCurrentBackground, backgroun
             <div className="mb-5 mr-1 text-sm">
                 <span className="text-white mr-5 font-italic">Geheimcodes für Extra-Levels...</span><input className="mt-5" onChange={(e) => setBonus(e.target.value)}></input><button className="ml-3 pr-1 pl-1 bg-green-500 text-white rounded-lg cursor-pointer" onClick={(e) => changeGeheimCode(e)}> 🥳 Open Magic</button>
              </div>
-             <div>
-                <button onClick={() => console.log(backgrounds)}>Clickl</button>
-             </div>
+             
        
             
 
