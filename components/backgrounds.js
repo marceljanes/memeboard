@@ -31,6 +31,7 @@ export default function Backgrounds({background, setCurrentBackground, backgroun
         if(bonus === 'Friebe') {           
             
             setPolitiker(politiker => [...politiker, friebe1])
+            
         }
         if(bonus === 'Nase') {
             
